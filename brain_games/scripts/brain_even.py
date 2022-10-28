@@ -1,25 +1,13 @@
 from random import randint
-import prompt
-
-
-def get_user_name():
-    name = prompt.string('May I have your name? ')
-    return name
-
-
-def check_answer(number, answ):
-    if (number % 2 == 0 and answ == 'yes') or (number % 2 != 0 and answ == 'no'):
-        correctness = 'True'
-    else:
-        correctness = 'False'
-    return correctness
+from brain_games.common_functions import welcome_user, get_user_name, say_hello, explain_game_rules, ask_question, get_answer
+from brain_games.common_functions import check_answer, respond_to_wrong_answer, respond_to_correct_answer, congratulate_user
 
 
 def main():
-    print('Welcome to the Brain Games!')
+    welcome_user()
     name = get_user_name()
-    print(f'Hello, {name}!')
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    say_hello()
+    explain_game_rules('Answer "yes" if the number is even, otherwise answer "no".')
     counter = 0
     while counter <= 3:
         random_number = randint(1, 100)
@@ -27,17 +15,17 @@ def main():
             even_number = 'yes'
         else:
             even_number = 'no'
-        print(f'Question: {random_number}')
-        answer = prompt.string('Your answer: ')
-        correctness = check_answer(random_number, answer)
+        ask_question(random_number)
+        answer = get_answer()
+        correctness = check_answer(even_number, answer)
         if correctness == 'False':
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{even_number}'.\nLet's try again, {name}")
+            respond_to_wrong_answer(even_number, answer, name)
             break
         else:
-            print('Correct!')
+            respond_to_correct_answer()
             counter += 1
         if counter == 3:
-            print(f'Congratulations, {name}!')
+            congratulate_user(name)
             break
 
 
