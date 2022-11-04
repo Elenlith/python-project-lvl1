@@ -8,3 +8,5 @@ Calculator game:
 <a href="https://asciinema.org/a/Yf3fhJHXU3GS0YFnAA2r3kbHq" target="_blank"><img src="https://asciinema.org/a/Yf3fhJHXU3GS0YFnAA2r3kbHq.svg" /></a>
 Greatest Common Divisor game:
 <a href="https://asciinema.org/a/BlN0KiZkRDdYziZwn9QFr8Kep" target="_blank"><img src="https://asciinema.org/a/BlN0KiZkRDdYziZwn9QFr8Kep.svg" /></a>
+Progression game:
+<a href="https://asciinema.org/a/NQmvDaC8WYVxnuDTkJBPFAVVz" target="_blank"><img src="https://asciinema.org/a/NQmvDaC8WYVxnuDTkJBPFAVVz.svg" /></a>
