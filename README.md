@@ -9,4 +9,6 @@ Calculator game:
 Greatest Common Divisor game:
 <a href="https://asciinema.org/a/BlN0KiZkRDdYziZwn9QFr8Kep" target="_blank"><img src="https://asciinema.org/a/BlN0KiZkRDdYziZwn9QFr8Kep.svg" /></a>
 Progression game:
-<a href="https://asciinema.org/a/NQmvDaC8WYVxnuDTkJBPFAVVz" target="_blank"><img src="https://asciinema.org/a/NQmvDaC8WYVxnuDTkJBPFAVVz.svg" /></a>
+<a href="https://asciinema.org/a/aQng5kGmwi3jnWSjEu1ZpGVMp" target="_blank"><img src="https://asciinema.org/a/aQng5kGmwi3jnWSjEu1ZpGVMp.svg" /></a>
+Prime Number game:
+<a href="https://asciinema.org/a/YDIiYTyGl4pPQqTnvgdgANN8b" target="_blank"><img src="https://asciinema.org/a/YDIiYTyGl4pPQqTnvgdgANN8b.svg" /></a>
