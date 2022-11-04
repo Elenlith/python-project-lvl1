@@ -33,7 +33,24 @@ def find_element_to_hide(progression):
 
 
 def hide_progression_element(progression, hidden_element):
-    index = progression.index(hidden_element, 0, len(progression) - 1)
+    index = progression.index(hidden_element)
     progression_with_hidden_element = progression
     progression_with_hidden_element[index] = ".."
     return progression_with_hidden_element
+
+
+def is_prime_number(number):
+    prime = True
+    if number == 1:
+        prime = False
+    elif number == 2:
+        prime = True
+    else:
+        i = 2
+        while i < number:
+            if number % i == 0:
+                prime = False
+                break
+            else:
+                i += 1
+    return prime
