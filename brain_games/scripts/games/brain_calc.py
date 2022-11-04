@@ -12,7 +12,7 @@ def main():
     while counter <= 3:
         number_1 = randint(1, 100)
         number_2 = randint(1, 100)
-        operators = [' + ',' - ',' * ']
+        operators = [' + ', ' - ', ' * ']
         chosen_operator = choice(operators)
         expression = str(number_1) + chosen_operator + str(number_2)
         expression_result = eval(expression)
