@@ -19,7 +19,7 @@ def main():
         ask_question(str(number_1) + ' ' + str(number_2))
         answer = int(get_answer())
         correctness = check_answer(result, answer)
-        if correctness == 'False':
+        if correctness is False:
             respond_to_wrong_answer(result, answer, name)
             break
         else:

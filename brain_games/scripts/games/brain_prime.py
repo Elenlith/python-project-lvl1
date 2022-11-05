@@ -14,15 +14,11 @@ def main():
     counter = 0
     while counter <= 3:
         random_number = randint(1, 100)
-        result = is_prime_number(random_number)
-        if result is True:
-            right_answer = 'yes'
-        else:
-            right_answer = 'no'
+        right_answer = is_prime_number(random_number)
         ask_question(random_number)
         answer = get_answer()
         correctness = check_answer(right_answer, answer)
-        if correctness == 'False':
+        if correctness is False:
             respond_to_wrong_answer(right_answer, answer, name)
             break
         else:

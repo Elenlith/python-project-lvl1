@@ -19,7 +19,7 @@ def main():
         ask_question(what_to_show)
         answer = int(get_answer())
         correctness = check_answer(hidden_element, answer)
-        if correctness == 'False':
+        if correctness is False:
             respond_to_wrong_answer(hidden_element, answer, name)
             break
         else:

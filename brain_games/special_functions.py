@@ -1,4 +1,21 @@
-from random import randint
+from random import randint, choice
+
+
+def check_parity(number):
+    if number % 2 == 0:
+        right_answer = 'yes'
+    else:
+        right_answer = 'no'
+    return right_answer
+
+
+def make_expression():
+    number_1 = randint(1, 100)
+    number_2 = randint(1, 100)
+    operators = [' + ', ' - ', ' * ']
+    chosen_operator = choice(operators)
+    expression = str(number_1) + chosen_operator + str(number_2)
+    return expression
 
 
 def find_greatest_common_divisor(a, b):
@@ -40,17 +57,17 @@ def hide_progression_element(progression, hidden_element):
 
 
 def is_prime_number(number):
-    prime = True
     if number == 1:
-        prime = False
+        right_answer = 'no'
     elif number == 2:
-        prime = True
+        right_answer = 'yes'
     else:
+        right_answer = 'yes'
         i = 2
         while i < number:
             if number % i == 0:
-                prime = False
+                right_answer = 'no'
                 break
             else:
                 i += 1
-    return prime
+    return right_answer

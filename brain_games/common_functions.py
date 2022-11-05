@@ -30,9 +30,9 @@ def get_answer():
 
 def check_answer(right_answer, answer):
     if answer == right_answer:
-        correctness = 'True'
+        correctness = True
     else:
-        correctness = 'False'
+        correctness = False
     return correctness
 
 
