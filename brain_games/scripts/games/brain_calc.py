@@ -25,8 +25,7 @@ def main():
         else:
             respond_to_correct_answer()
             counter += 1
-        if counter == 3:
-            congratulate_user(name)
+        congratulate_user(name) if counter == 3 else None
 
 
 if __name__ == '__main__':
