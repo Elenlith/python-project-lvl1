@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
-authors = ["Elenlith <mishchenkov@list.ru>"]
+description = "Five simple games based on math"
+authors = ["Kirill Mischenkov aka Elenlith <mishchenkov@list.ru>"]
 readme = "README.md"
+repository = "https://github.com/Elenlith/python-project-lvl1"
 packages = [
   { include = "brain_games" },
 ]
