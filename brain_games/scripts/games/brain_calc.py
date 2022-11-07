@@ -1,5 +1,9 @@
-from brain_games.common_functions import welcome_user, get_user_name, say_hello, explain_game_rules, ask_question, get_answer
-from brain_games.common_functions import check_answer, respond_to_wrong_answer, respond_to_correct_answer, congratulate_user
+from brain_games.common_functions import welcome_user, get_user_name, say_hello
+from brain_games.common_functions import explain_game_rules, ask_question
+from brain_games.common_functions import get_answer, check_answer
+from brain_games.common_functions import respond_to_wrong_answer
+from brain_games.common_functions import respond_to_correct_answer
+from brain_games.common_functions import congratulate_user
 from brain_games.special_functions import make_expression
 
 

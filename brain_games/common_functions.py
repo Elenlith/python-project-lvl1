@@ -36,8 +36,10 @@ def check_answer(right_answer, answer):
     return correctness
 
 
-def respond_to_wrong_answer(right_answer, answer, name):
-    print(f"'{answer}' is wrong answer ;(. Correct answer was '{right_answer}'.\nLet's try again, {name}!")
+def respond_to_wrong_answer(right_answ, answer, name):
+    text = f"'{answer}' is wrong answer ;(. Correct answer was '{right_answ}'."
+    print(text)
+    print(f"Let's try again, {name}!")
 
 
 def respond_to_correct_answer():
