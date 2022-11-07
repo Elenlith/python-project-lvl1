@@ -10,7 +10,7 @@ def main():
     say_hello()
     explain_game_rules('Answer "yes" if the number is even, otherwise answer "no".')
     counter = 0
-    while counter <= 3:
+    while counter < 3:
         random_number = randint(1, 100)
         right_answer = check_parity(random_number)
         ask_question(random_number)
@@ -24,7 +24,6 @@ def main():
             counter += 1
         if counter == 3:
             congratulate_user(name)
-            break
 
 
 if __name__ == '__main__':

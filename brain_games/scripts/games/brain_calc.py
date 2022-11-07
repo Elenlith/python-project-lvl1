@@ -9,7 +9,7 @@ def main():
     say_hello()
     explain_game_rules('What is the result of the expression?')
     counter = 0
-    while counter <= 3:
+    while counter < 3:
         expression = make_expression()
         expression_result = eval(expression)
         ask_question(expression)
@@ -23,7 +23,6 @@ def main():
             counter += 1
         if counter == 3:
             congratulate_user(name)
-            break
 
 
 if __name__ == '__main__':

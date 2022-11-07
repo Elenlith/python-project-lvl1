@@ -12,7 +12,7 @@ def main():
     say_hello()
     explain_game_rules('Find the greatest common divisor of given numbers.')
     counter = 0
-    while counter <= 3:
+    while counter < 3:
         number_1 = randint(1, 100)
         number_2 = randint(1, 100)
         result = find_greatest_common_divisor(number_1, number_2)
@@ -27,7 +27,6 @@ def main():
             counter += 1
         if counter == 3:
             congratulate_user(name)
-            break
 
 
 if __name__ == '__main__':

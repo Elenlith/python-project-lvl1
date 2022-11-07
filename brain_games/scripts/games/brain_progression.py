@@ -12,7 +12,7 @@ def main():
     say_hello()
     explain_game_rules('What number is missing in the progression?')
     counter = 0
-    while counter <= 3:
+    while counter < 3:
         progression = create_progression()
         hidden_element = find_element_to_hide(progression)
         what_to_show = ' '.join(map(str, hide_progression_element(progression, hidden_element)))
@@ -27,7 +27,6 @@ def main():
             counter += 1
         if counter == 3:
             congratulate_user(name)
-            break
 
 
 if __name__ == '__main__':
