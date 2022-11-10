@@ -15,6 +15,13 @@ def respond_to_wrong_answer(right_answ, answer, name):
     print(f"Let's try again, {name}!")
 
 
+def congratulate_user(counter, name):
+    if counter == 3:
+        print(f'Congratulations, {name}!')
+    else:
+        pass
+
+
 def major_func(task, quest, r_answ):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
@@ -33,5 +40,4 @@ def major_func(task, quest, r_answ):
         else:
             print('Correct!')
             counter += 1
-        if counter == 3:
-            print(f'Congratulations, {name}!')
+        congratulate_user(counter, name)
