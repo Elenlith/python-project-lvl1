@@ -1,26 +1,6 @@
 import prompt
 
 
-def generate_task(counter, quest1, quest2, quest3):
-    if counter == 0:
-        question = quest1
-    elif counter == 1:
-        question = quest2
-    else:
-        question = quest3
-    return question
-
-
-def find_right_answer(counter, r_answ1, r_answ2, r_answ3):
-    if counter == 0:
-        right_answ = r_answ1
-    elif counter == 1:
-        right_answ = r_answ2
-    else:
-        right_answ = r_answ3
-    return right_answ
-
-
 def check_answer(right_answ, answer):
     if answer == right_answ:
         correctness = True
@@ -35,15 +15,15 @@ def respond_to_wrong_answer(right_answ, answer, name):
     print(f"Let's try again, {name}!")
 
 
-def major_func(task, quest1, quest2, quest3, r_answ1, r_answ2, r_answ3):
+def major_func(task, quest, r_answ):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print(task)
     counter = 0
     while counter < 3:
-        question = generate_task(counter, quest1, quest2, quest3)
-        right_answ = find_right_answer(counter, r_answ1, r_answ2, r_answ3)
+        question = quest[counter]
+        right_answ = r_answ[counter]
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
         correctness = check_answer(right_answ, answer)

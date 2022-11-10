@@ -5,14 +5,16 @@ from brain_games.games.brain_prime_func import is_prime_number
 
 
 def main():
-    task = RULE
-    quest1 = generate_number()
-    r_answ1 = is_prime_number(quest1)
-    quest2 = generate_number()
-    r_answ2 = is_prime_number(quest2)
-    quest3 = generate_number()
-    r_answ3 = is_prime_number(quest3)
-    major_func(task, quest1, quest2, quest3, r_answ1, r_answ2, r_answ3)
+    quest = []
+    r_answ = []
+    i = 0
+    while i <= 2:
+        number = generate_number()
+        quest.append(number)
+        answ = is_prime_number(quest[i])
+        r_answ.append(answ)
+        i += 1
+    major_func(RULE, quest, r_answ)
 
 
 if __name__ == '__main__':

@@ -5,20 +5,18 @@ from brain_games.games.brain_gcd_func import find_greatest_common_divisor
 
 
 def main():
-    task = RULE
-    a1 = generate_number()
-    b1 = generate_number()
-    quest1 = str(a1) + ' ' + str(b1)
-    r_answ1 = str(find_greatest_common_divisor(a1, b1))
-    a2 = generate_number()
-    b2 = generate_number()
-    quest2 = str(a2) + ' ' + str(b2)
-    r_answ2 = str(find_greatest_common_divisor(a2, b2))
-    a3 = generate_number()
-    b3 = generate_number()
-    quest3 = str(a3) + ' ' + str(b3)
-    r_answ3 = str(find_greatest_common_divisor(a3, b3))
-    major_func(task, quest1, quest2, quest3, r_answ1, r_answ2, r_answ3)
+    quest = []
+    r_answ = []
+    i = 0
+    while i <= 2:
+        a = generate_number()
+        b = generate_number()
+        numbers = str(a) + ' ' + str(b)
+        quest.append(numbers)
+        answ = str(find_greatest_common_divisor(a, b))
+        r_answ.append(answ)
+        i += 1
+    major_func(RULE, quest, r_answ)
 
 
 if __name__ == '__main__':

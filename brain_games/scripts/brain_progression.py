@@ -6,20 +6,18 @@ from brain_games.games.brain_progression_func import hide_progression_element
 
 
 def main():
-    task = RULE
-    progr1 = create_progression()
-    hid_el1 = find_element_to_hide(progr1)
-    quest1 = ' '.join(map(str, hide_progression_element(progr1, hid_el1)))
-    r_answ1 = str(hid_el1)
-    progr2 = create_progression()
-    hid_el2 = find_element_to_hide(progr2)
-    quest2 = ' '.join(map(str, hide_progression_element(progr2, hid_el2)))
-    r_answ2 = str(hid_el2)
-    progr3 = create_progression()
-    hid_el3 = find_element_to_hide(progr3)
-    quest3 = ' '.join(map(str, hide_progression_element(progr3, hid_el3)))
-    r_answ3 = str(hid_el3)
-    major_func(task, quest1, quest2, quest3, r_answ1, r_answ2, r_answ3)
+    quest = []
+    r_answ = []
+    i = 0
+    while i <= 2:
+        progr = create_progression()
+        hid_el = find_element_to_hide(progr)
+        question = ' '.join(map(str, hide_progression_element(progr, hid_el)))
+        answ = str(hid_el)
+        quest.append(question)
+        r_answ.append(answ)
+        i += 1
+    major_func(RULE, quest, r_answ)
 
 
 if __name__ == '__main__':
