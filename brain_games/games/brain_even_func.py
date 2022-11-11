@@ -14,3 +14,23 @@ def check_parity(number):
     else:
         r_answ = 'no'
     return r_answ
+
+
+def prepare_questions():
+    quest = []
+    i = 0
+    while i <= 2:
+        number = generate_number()
+        quest.append(number)
+        i += 1
+    return quest
+
+
+def prepare_answers(quest):
+    r_answ = []
+    i = 0
+    while i <= 2:
+        answ = check_parity(quest[i])
+        r_answ.append(answ)
+        i += 1
+    return r_answ
