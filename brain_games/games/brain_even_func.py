@@ -10,9 +10,9 @@ def generate_number():
 
 def check_parity(number):
     if number % 2 == 0:
-        r_answ = 'yes'
+        r_answ = True
     else:
-        r_answ = 'no'
+        r_answ = False
     return r_answ
 
 
@@ -30,7 +30,10 @@ def prepare_answers(quest):
     r_answ = []
     i = 0
     while i <= 2:
-        answ = check_parity(quest[i])
+        if check_parity(quest[i]) is True:
+            answ = 'yes'
+        else:
+            answ = 'no'
         r_answ.append(answ)
         i += 1
     return r_answ

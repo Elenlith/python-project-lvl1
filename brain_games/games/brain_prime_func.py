@@ -8,26 +8,21 @@ def generate_number():
     return random_number
 
 
-def is_prime_number_cycle(number):
-    right_answer = 'yes'
-    i = 2
-    while i < number:
-        if number % i == 0:
-            right_answer = 'no'
-            break
-        else:
-            i += 1
-    return right_answer
-
-
 def is_prime_number(number):
     if number == 1:
-        right_answer = 'no'
+        prime_number = False
     elif number == 2:
-        right_answer = 'yes'
+        prime_number = True
     else:
-        right_answer = is_prime_number_cycle(number)
-    return right_answer
+        prime_number = True
+        i = 2
+        while i < number:
+            if number % i == 0:
+                prime_number = False
+                break
+            else:
+                i += 1
+    return prime_number
 
 
 def prepare_questions():
@@ -44,7 +39,10 @@ def prepare_answers(quest):
     r_answ = []
     i = 0
     while i <= 2:
-        answ = is_prime_number(quest[i])
+        if is_prime_number(quest[i]) is True:
+            answ = 'yes'
+        else:
+            answ = 'no'
         r_answ.append(answ)
         i += 1
     return r_answ

@@ -13,7 +13,16 @@ def make_expression():
 
 
 def make_calculation(expression):
-    result = str(eval(expression))
+    chars = expression.split()
+    number_1 = int(chars[0])
+    op = chars[1]
+    number_2 = int(chars[2])
+    if op == '+':
+        result = str(number_1 + number_2)
+    elif op == '-':
+        result = str(number_1 - number_2)
+    else:
+        result = str(number_1 * number_2)
     return result
 
 
