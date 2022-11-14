@@ -8,7 +8,7 @@ def make_expression():
     number_2 = randint(1, 100)
     operators = [' + ', ' - ', ' * ']
     chosen_operator = choice(operators)
-    expression = str(number_1) + chosen_operator + str(number_2)
+    expression = f'{str(number_1)} {chosen_operator} {str(number_2)}'
     return expression
 
 
