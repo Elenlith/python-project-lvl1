@@ -6,7 +6,7 @@ RULE = 'What is the result of the expression?'
 def make_expression():
     number_1 = randint(1, 100)
     number_2 = randint(1, 100)
-    operators = [' + ', ' - ', ' * ']
+    operators = ['+', '-', '*']
     chosen_operator = choice(operators)
     expression = f'{str(number_1)} {chosen_operator} {str(number_2)}'
     return expression
