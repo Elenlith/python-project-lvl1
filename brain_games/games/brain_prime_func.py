@@ -39,7 +39,7 @@ def prepare_answers(quest):
     r_answ = []
     i = 0
     while i <= 2:
-        if is_prime_number(quest[i]) is True:
+        if is_prime_number(quest[i]):
             answ = 'yes'
         else:
             answ = 'no'

@@ -30,7 +30,7 @@ def prepare_answers(quest):
     r_answ = []
     i = 0
     while i <= 2:
-        if check_parity(quest[i]) is True:
+        if check_parity(quest[i]):
             answ = 'yes'
         else:
             answ = 'no'

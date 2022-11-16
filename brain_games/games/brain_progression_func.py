@@ -3,7 +3,7 @@ from random import randint
 RULE = 'What number is missing in the progression?'
 
 
-def create_progression():
+def create_progression_with_hidden_elem():
     progression = []
     first_number = randint(1, 100)
     delta = randint(1, 10)
@@ -14,31 +14,21 @@ def create_progression():
         progression.append(number)
         i += 1
         number += delta
-    return progression
-
-
-def find_element_to_hide(progression):
     n = len(progression) - 1
     index = randint(0, n)
     hidden_element = progression[index]
-    return hidden_element
-
-
-def hide_progr_elem(progression, hidden_element):
-    index = progression.index(hidden_element)
-    progression_with_hidden_element = progression
-    progression_with_hidden_element[index] = ".."
-    return progression_with_hidden_element
+    progression[index] = ".."
+    question = ' '.join(map(str, progression))
+    question_and_answer = [question, hidden_element]
+    return question_and_answer
 
 
 def prep_progr_list():
     progr_l = []
     i = 1
     while i <= 3:
-        pr = create_progression()
-        hid_el = find_element_to_hide(pr)
+        pr = create_progression_with_hidden_elem()
         progr_l.append(pr)
-        progr_l.append(hid_el)
         i += 1
     return progr_l
 
@@ -46,24 +36,18 @@ def prep_progr_list():
 def prepare_questions(progr_l):
     quest = []
     i = 0
-    j = 0
     while i <= 2:
-        progr = progr_l[j]
-        hid_el = progr_l[j + 1]
-        question = ' '.join(map(str, hide_progr_elem(progr, hid_el)))
+        question = str(progr_l[i][0])
         quest.append(question)
         i += 1
-        j += 2
     return quest
 
 
 def prepare_answers(progr_l):
     r_answ = []
     i = 0
-    j = 1
     while i <= 2:
-        answ = str(progr_l[j])
+        answ = str(progr_l[i][1])
         r_answ.append(answ)
         i += 1
-        j += 2
     return r_answ

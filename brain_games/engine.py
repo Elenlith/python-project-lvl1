@@ -16,14 +16,14 @@ def launch_engine(task, quest, r_answ):
             correctness = True
         else:
             correctness = False
-        if correctness is False:
+        if correctness:
+            print('Correct!')
+            counter += 1
+        else:
             text = f"'{ans}' is wrong answer ;(. Correct answer was '{r_ans}'."
             print(text)
             print(f"Let's try again, {name}!")
             break
-        else:
-            print('Correct!')
-            counter += 1
         if counter == 3:
             print(f'Congratulations, {name}!')
         else:
