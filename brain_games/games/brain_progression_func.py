@@ -3,7 +3,7 @@ from random import randint
 RULE = 'What number is missing in the progression?'
 
 
-def create_progression_with_hidden_elem():
+def prepare_question():
     progression = []
     first_number = randint(1, 100)
     delta = randint(1, 10)
@@ -16,38 +16,21 @@ def create_progression_with_hidden_elem():
         number += delta
     n = len(progression) - 1
     index = randint(0, n)
-    hidden_element = progression[index]
     progression[index] = ".."
     question = ' '.join(map(str, progression))
-    question_and_answer = [question, hidden_element]
-    return question_and_answer
+    return question
 
 
-def prep_progr_list():
-    progr_l = []
-    i = 1
-    while i <= 3:
-        pr = create_progression_with_hidden_elem()
-        progr_l.append(pr)
-        i += 1
-    return progr_l
-
-
-def prepare_questions(progr_l):
-    quest = []
-    i = 0
-    while i <= 2:
-        question = str(progr_l[i][0])
-        quest.append(question)
-        i += 1
-    return quest
-
-
-def prepare_answers(progr_l):
-    r_answ = []
-    i = 0
-    while i <= 2:
-        answ = str(progr_l[i][1])
-        r_answ.append(answ)
-        i += 1
-    return r_answ
+def prepare_answer(quest):
+    global found_index
+    progression = quest.split()
+    for index, elem in enumerate(progression):
+        if elem == "..":
+            found_index = index
+    if found_index != 0 and found_index != 1:
+        delta = int(progression[1]) - int(progression[0])
+        hidden_element = int(progression[found_index - 1]) + delta
+    else:
+        delta = int(progression[4]) - int(progression[3])
+        hidden_element = int(progression[found_index + 1]) - delta
+    return str(hidden_element)

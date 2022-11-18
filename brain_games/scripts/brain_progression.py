@@ -1,15 +1,9 @@
 from brain_games.engine import launch_engine
-from brain_games.games.brain_progression_func import RULE
-from brain_games.games.brain_progression_func import prep_progr_list
-from brain_games.games.brain_progression_func import prepare_questions
-from brain_games.games.brain_progression_func import prepare_answers
+import brain_games.games.brain_progression_func
 
 
 def main():
-    progressions = prep_progr_list()
-    quest = prepare_questions(progressions)
-    r_answ = prepare_answers(progressions)
-    launch_engine(RULE, quest, r_answ)
+    launch_engine(brain_games.games.brain_progression_func)
 
 
 if __name__ == '__main__':

@@ -3,7 +3,7 @@ from random import randint
 RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def generate_number():
+def prepare_question():
     random_number = randint(1, 100)
     return random_number
 
@@ -16,24 +16,9 @@ def check_parity(number):
     return r_answ
 
 
-def prepare_questions():
-    quest = []
-    i = 0
-    while i <= 2:
-        number = generate_number()
-        quest.append(number)
-        i += 1
-    return quest
-
-
-def prepare_answers(quest):
-    r_answ = []
-    i = 0
-    while i <= 2:
-        if check_parity(quest[i]):
-            answ = 'yes'
-        else:
-            answ = 'no'
-        r_answ.append(answ)
-        i += 1
+def prepare_answer(quest):
+    if check_parity(quest):
+        r_answ = 'yes'
+    else:
+        r_answ = 'no'
     return r_answ

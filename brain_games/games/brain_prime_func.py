@@ -3,7 +3,7 @@ from random import randint
 RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def generate_number():
+def prepare_question():
     random_number = randint(1, 100)
     return random_number
 
@@ -25,24 +25,9 @@ def is_prime_number(number):
     return prime_number
 
 
-def prepare_questions():
-    quest = []
-    i = 0
-    while i <= 2:
-        number = generate_number()
-        quest.append(number)
-        i += 1
-    return quest
-
-
-def prepare_answers(quest):
-    r_answ = []
-    i = 0
-    while i <= 2:
-        if is_prime_number(quest[i]):
-            answ = 'yes'
-        else:
-            answ = 'no'
-        r_answ.append(answ)
-        i += 1
+def prepare_answer(quest):
+    if is_prime_number(quest):
+        r_answ = 'yes'
+    else:
+        r_answ = 'no'
     return r_answ

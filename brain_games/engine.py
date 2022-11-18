@@ -1,15 +1,15 @@
 import prompt
 
 
-def launch_engine(task, quest, r_answ):
+def launch_engine(module):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    print(task)
+    print(module.RULE)
     counter = 0
     while counter < 3:
-        question = quest[counter]
-        r_ans = r_answ[counter]
+        question = module.prepare_question()
+        r_ans = module.prepare_answer(question)
         print(f'Question: {question}')
         ans = prompt.string('Your answer: ')
         if ans == r_ans:
