@@ -1,22 +1,18 @@
 import prompt
 
 
-def launch_engine(module):
+def launch_engine(game):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    print(module.RULE)
+    print(game.RULE)
     counter = 0
     while counter < 3:
-        question = module.prepare_question()
-        r_ans = module.prepare_answer(question)
+        question = game.prepare_question()
+        r_ans = game.prepare_answer(question)
         print(f'Question: {question}')
         ans = prompt.string('Your answer: ')
         if ans == r_ans:
-            correctness = True
-        else:
-            correctness = False
-        if correctness:
             print('Correct!')
             counter += 1
         else:

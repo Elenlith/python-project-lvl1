@@ -1,9 +1,9 @@
 from brain_games.engine import launch_engine
-import brain_games.games.brain_gcd_func
+import brain_games.games.gcd
 
 
 def main():
-    launch_engine(brain_games.games.brain_gcd_func)
+    launch_engine(brain_games.games.gcd)
 
 
 if __name__ == '__main__':
