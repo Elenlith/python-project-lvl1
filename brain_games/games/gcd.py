@@ -13,16 +13,9 @@ def find_greatest_common_divisor(a, b):
     return result
 
 
-def prepare_question():
+def prepare_q_and_a():
     a = randint(1, 100)
     b = randint(1, 100)
     quest = f'{a} {b}'
-    return quest
-
-
-def prepare_answer(quest):
-    chars = quest.split()
-    a = int(chars[0])
-    b = int(chars[1])
     r_answ = str(find_greatest_common_divisor(a, b))
-    return r_answ
+    return [quest, r_answ]

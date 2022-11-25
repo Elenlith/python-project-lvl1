@@ -3,11 +3,6 @@ from random import randint
 RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def prepare_question():
-    random_number = randint(1, 100)
-    return random_number
-
-
 def is_prime_number(number):
     if number == 1:
         prime_number = False
@@ -25,9 +20,10 @@ def is_prime_number(number):
     return prime_number
 
 
-def prepare_answer(quest):
-    if is_prime_number(quest):
+def prepare_q_and_a():
+    random_number = randint(1, 100)
+    if is_prime_number(random_number):
         r_answ = 'yes'
     else:
         r_answ = 'no'
-    return r_answ
+    return [random_number, r_answ]

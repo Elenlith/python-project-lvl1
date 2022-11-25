@@ -8,8 +8,9 @@ def launch_engine(game):
     print(game.RULE)
     counter = 0
     while counter < 3:
-        question = game.prepare_question()
-        r_ans = game.prepare_answer(question)
+        q_and_a = game.prepare_q_and_a()
+        question = q_and_a[0]
+        r_ans = q_and_a[1]
         print(f'Question: {question}')
         ans = prompt.string('Your answer: ')
         if ans == r_ans:
